@@ -13,21 +13,23 @@ struct ContentView: View {
         
         ZStack {
             
-            Image("Breakfast").resizable()
+            Image("Breakfast").resizable().edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             VStack{
                 
         
                 ZStack{
                     
-                    Image("TopGradient")
+                    Image("TopGradient").padding(.bottom, 130.0)
+                        
                     
                     VStack(){
                             
-                            Spacer()
-                            HStack(spacing: 165){
+                        Spacer()
+                            HStack(spacing: 200){
                               
                                 Text("Hardcore\nAvo Toast").font(.title).fontWeight(.semibold).foregroundColor(Color.white).multilineTextAlignment(.leading)
-                                                                                               Image("Heart_health")
+                              
+                                Image("Heart_health")
                             }
                            Spacer()
                             Spacer()
@@ -37,19 +39,20 @@ struct ContentView: View {
                            
                     }
 
+                
                                 
-                                
-                    }
+                }
                     
 
                 ZStack{
-                    Image("BottomGradient")
+                    Image("BottomGradient").padding(.top, 130.0)
                     
                     VStack {
                         Spacer()
                         Spacer()
                         Spacer()
                         Spacer()
+                        
                         Text("Energize with this healthy and hearty breakfast").foregroundColor(.white)
                         
                         Spacer()
