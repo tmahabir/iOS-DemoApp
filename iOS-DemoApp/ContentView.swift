@@ -10,8 +10,9 @@ import SwiftUI
 
 struct ContentView: View {
     
-    private var symbols = ["apple-1", "star", "cherry"]
+    @State private var symbols = ["apple-1", "star", "cherry"]
     @State private var numbers = [2, 1, 2]
+    @State private var backgrounds = [Color.white, Color.white, Color.white]
     
     @State private var credits = 1000
     private var betAmount = 5
@@ -52,14 +53,11 @@ struct ContentView: View {
                 HStack {
                     Spacer()
                     
-                    Image(symbols[numbers[0]]).resizable().aspectRatio(1, contentMode: .fit)
-                        .background(Color.white.opacity(0.5)).cornerRadius(20)
+                    CardView(symbol: $symbols[numbers[0]], background: $backgrounds[0])
                     
-                    Image(symbols[numbers[1]]).resizable().aspectRatio(1, contentMode: .fit)
-                        .background(Color.white.opacity(0.5)).cornerRadius(20)
+                    CardView(symbol: $symbols[numbers[1]], background: $backgrounds[1])
                     
-                    Image(symbols[numbers[2]]).resizable().aspectRatio(1, contentMode: .fit)
-                        .background(Color.white.opacity(0.5)).cornerRadius(20)
+                    CardView(symbol: $symbols[numbers[2]], background: $backgrounds[2])
                     
                     Spacer()
                 }
@@ -69,15 +67,29 @@ struct ContentView: View {
                 //Button
                 Button(action: {
                     
+                    //Sets backgrounds back to white
+                    //self.backgrounds[0] = Color.white
+                    //self.backgrounds[1] = Color.white
+                    //self.backgrounds[2] = Color.white
+                    
+                    //Alternative to the 3 lines above
+                    self.backgrounds = self.backgrounds.map { _ in Color.white
+                    }
+                    
                     //Change the images
-                    self.numbers[0] = Int.random(in: 0...self.symbols.count-1)
-                    self.numbers[1] = Int.random(in: 0...self.symbols.count-1)
-                    self.numbers[2] = Int.random(in: 0...self.symbols.count-1)
+                    self.numbers = self.numbers.map { _ in Int.random(in: 0...self.symbols.count-1)
+                    }
                     
                     //Check winnings
                     if self.numbers[0] == self.numbers[1] && self.numbers[1] == self.numbers[2] {
                         
+                        //Won
                         self.credits += self.betAmount*10
+                        
+                        //Updates background to green
+                        self.backgrounds = self.backgrounds.map { _ in Color.green
+                        }
+                        
                     } else {
                         self.credits -= self.betAmount
                     }

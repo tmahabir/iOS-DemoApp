@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A423911225BBF3DF00052D13 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A423911125BBF3DF00052D13 /* CardView.swift */; };
 		A4F075FC249168F500863280 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F075FB249168F500863280 /* AppDelegate.swift */; };
 		A4F075FE249168F500863280 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F075FD249168F500863280 /* SceneDelegate.swift */; };
 		A4F07600249168F500863280 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F075FF249168F500863280 /* ContentView.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A423911125BBF3DF00052D13 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		A4F075F8249168F500863280 /* iOS-DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-DemoApp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4F075FB249168F500863280 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4F075FD249168F500863280 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				A4F075FB249168F500863280 /* AppDelegate.swift */,
 				A4F075FD249168F500863280 /* SceneDelegate.swift */,
 				A4F075FF249168F500863280 /* ContentView.swift */,
+				A423911125BBF3DF00052D13 /* CardView.swift */,
 				A4F07601249168F900863280 /* Assets.xcassets */,
 				A4F07606249168F900863280 /* LaunchScreen.storyboard */,
 				A4F07609249168F900863280 /* Info.plist */,
@@ -269,6 +272,7 @@
 			files = (
 				A4F075FC249168F500863280 /* AppDelegate.swift in Sources */,
 				A4F075FE249168F500863280 /* SceneDelegate.swift in Sources */,
+				A423911225BBF3DF00052D13 /* CardView.swift in Sources */,
 				A4F07600249168F500863280 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
